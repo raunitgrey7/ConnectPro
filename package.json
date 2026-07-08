@@ -1,0 +1,9 @@
+{
+  "name": "connectpro-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "npm install --prefix frontend && cd backend && py -3.12 -m venv venv && .\\venv\\Scripts\\pip install -r requirements.txt",
+    "dev": "npx -y concurrently --kill-others \"cd backend && .\\venv\\Scripts\\python run.py\" \"npm run dev --prefix frontend\""
+  }
+}
